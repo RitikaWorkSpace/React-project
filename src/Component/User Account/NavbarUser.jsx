@@ -22,12 +22,15 @@ const NavbarUser = () => {
       {isDropdownOpen && (
        <div className="absolute right-0 mt-2 hover:bg-[#DB4444] rounded w-[245px]">
        <ul className="bg-gradient-to-r from-[#98729d] to-[#666267] text-white w-full py-[10px] px-[20px] list-none">
-        <Link to='/UA'>
+       
         <li className="flex items-center  gap-[16px] mb-[13px] cursor-pointer">
-           <img src="./nac01user.svg" alt="navbar user icon" className="w-[20px] " />
-           <p>Manage My Account</p>
+          <Link to='/UA'>
+          <img src="./nac01user.svg" alt="navbar user icon" className="w-[20px] " />
+          <p>Manage My Account</p>
+          </Link>
+          
          </li>
-        </Link>
+       
       
          <li className="flex items-center  gap-[16px] mb-[13px] cursor-pointer">
            <img src="./nac02Group.svg" alt="navbar user icon" />
