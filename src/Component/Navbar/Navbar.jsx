@@ -23,7 +23,7 @@ const Navbar = () => {
           Exclusive
         </div>
 
-        <div className="block sm:hidden">
+        <div className="block sm:hidden ">
                 <img
                   src="./Mobile Menu.svg"
                   alt="Menu"
@@ -33,8 +33,8 @@ const Navbar = () => {
                 />
               </div>
         {/* Navigation Links */}
-        {list && (
-        <nav className="my-4 sm:my-0">
+        
+        <nav className={`${list ? 'block' : 'hidden'} sm:block my-4 sm:my-0`}>
         <ul className="flex flex-col  gap-[10px] sm:flex-row justify-evenly space-y-2 sm:space-y-0 sm:space-x-8">
           <li className="font-poppins font-[400] text-[16px] leading-[24px] border-b-[2px] border-transparent hover:border-black">
             <Link to="/">Home</Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
         </ul>
       </nav>
      
-      )}
+      
      
 
         {/* Search Bar and Icons */}
