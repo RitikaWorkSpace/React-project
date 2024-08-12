@@ -35,7 +35,7 @@ const FlashSales = () => {
      style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
   <div className="flex overflow-hidden">
     <div
-      className="grid grid-cols-1  sm:grid-cols-2    md:grid-cols-2   lg:grid-cols-4 gap-[30px] w-full"
+      className="grid grid-cols-1  sm:grid-cols-2    md:grid-cols-2   lg:grid-cols-3  xl:grid-cols-4 gap-[30px] w-full"
       style={{ transform: `translateX(-${currentIndex * 100}%)` }}
     >
       {products.map((item) => (

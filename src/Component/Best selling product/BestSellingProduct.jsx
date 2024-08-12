@@ -32,11 +32,19 @@ const BestSellingProduct = () => {
 
              {/*  product */}
   
-     <div className="grid grid-cols-1 m-[30px] sm:grid-cols-2 lg:grid-cols-4 gap-[30px] mt-[20px]">
+     {/* <div className="grid grid-cols-1 m-[30px] sm:grid-cols-2 lg:grid-cols-4 gap-[30px] mt-[20px]">
         {limitedProducts.map((item) => (
           <Card2 item={item} key={item.id} />
         ))}
-      </div>
+      </div> */}
+
+        {/*  rc product */}
+        <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[30px] md:mt-[20px] md:mb-[140px]">
+                {limitedProducts.map((item) => (
+                    <Card2 item={item} key={item.id} />
+                ))}
+            </div>
+            {/* rc  product */}
      
     
      

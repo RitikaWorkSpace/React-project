@@ -20,7 +20,7 @@ const CategoriesBanner = () => {
 
       {/* new try */}
       <div className="relative mt-[37px] mb-[47px]">
-        <div className="absolute  top-[54px] right-[112px] p-[85px] md:top-[72px] md:right-[208px] md:p-[108px] shadow-custom-white rounded-[75%] "></div>
+        <div className="absolute md:top-[101px] md:right-[208px] md:p-[106px] xs:top-[40px] xs:right-[104px] xs:p-[71px] lg:top-[71px] shadow-custom-white rounded-[75%] "></div>
         <div className="">
           <img
             src="./CatergoriesSpeaker.svg"
