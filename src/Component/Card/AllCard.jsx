@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Countdown from "../FlashSales/Countdown";
-import Card from "../Card/Card.jsx";
-import products from "../../data.jsx";
+// import Card from "../Card/Card.jsx";
+// import products from "../../data.jsx";
 
 const FlashSales = () => {
  

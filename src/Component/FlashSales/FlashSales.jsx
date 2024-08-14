@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Countdown from "../FlashSales/Countdown";
 import Card from "../Card/Card.jsx";
-import products from "../../data.jsx";
+// import products from "../../data.jsx";
 import {Link} from 'react-router-dom';
 
-const FlashSales = () => {
+const FlashSales = ({product}) => {
+
+
  
   // carousal
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,6 +19,9 @@ const FlashSales = () => {
   };
   
   // carousal
+
+
+
 
   return (
     <div className="pb-[60px] border-b border-grey-500 w-full overflow-hidden">
@@ -65,12 +70,21 @@ const FlashSales = () => {
         </div>
 
     {/*  product */}
-<div className="flex gap-[30px] mt-[20px] transition-transform duration-300" 
+{/* <div className="flex gap-[30px] mt-[20px] transition-transform duration-300" 
      style={{ transform: `translateX(-${currentIndex * 250}px)` }}>
   {products.map((item) => (
     <Card item={item} key={item.id} />
   ))}
-</div>
+</div> */}
+
+<Card product ={product}/>
+
+
+
+
+
+
+
 {/*  product */}
    
 

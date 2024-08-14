@@ -1,10 +1,15 @@
 import React,{useState} from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
-import Cart from "../Cart/Cart";
+// import Cart from "../Cart/Cart";
 import NavbarUser from "../User Account/NavbarUser";
 
 const Navbar = () => {
+
+
+
+
+
   const [list, setList] = useState(false);
 
   const handleClick = () => {
@@ -72,7 +77,18 @@ const Navbar = () => {
             <img src="./Wishlist.svg" className="ml-4 sm:ml-4" alt="Wishlist" />
 
 <div>
-<Cart />
+  
+{/* <Cart size ={cart.length} setShow={setShow}/> */}
+
+<Link to='/CartPage'>
+       <div className='relative inline-block'>
+      <img src="./Cart1.svg" className='ml-4 sm:ml-4' alt="Cart" />
+      <div className='text-white bg-red-500 rounded-full w-6 h-6 flex items-center justify-center absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2' onClick={()=>setShow(false)}>
+       0 {/* {size} */}
+
+      </div>
+    </div>
+      </Link>
 </div>
  {user ? (
               <div>

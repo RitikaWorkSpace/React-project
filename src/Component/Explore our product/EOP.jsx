@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import products from "../../data.jsx";
-import Card2 from '../Card/Card2';
+// import products from "../../data.jsx";
+// import Card2 from '../Card/Card2';
 import {Link} from 'react-router-dom';
 
 const EOP = () => {
@@ -18,7 +18,7 @@ const EOP = () => {
   };
   
   // carousal
-  const limitedProducts = products.slice(0, 4);
+  // const limitedProducts = products.slice(0, 4);
     return (
 
         <div className='max-w-[1170px] w-[100%] mt-[70px] mx-auto'>
@@ -63,11 +63,11 @@ const EOP = () => {
       </div> */}
 
        {/*  rc product */}
-       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[30px] md:mt-[20px] md:mb-[140px]">
+       {/* <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[30px] md:mt-[20px] md:mb-[140px]">
                 {limitedProducts.map((item) => (
                     <Card2 item={item} key={item.id} />
                 ))}
-            </div>
+            </div> */}
             {/* rc  product */}
      
     

@@ -12,11 +12,11 @@ const Home = () => {
         <div>
             <Banner/>
             <FlashSales/>
-            <Categories/>
+            <Categories/> 
             <BestSellingProduct/>
             <CategoriesBanner/>
             <EOP/>
-            <NA/>
+             <NA/>
         </div>
     );
 }

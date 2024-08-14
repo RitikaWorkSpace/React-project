@@ -1,7 +1,7 @@
 import React from 'react';
 import Counter from './Counter';
-import products from "../../data.jsx";
-import Card2 from '../Card/Card2.jsx';
+// import products from "../../data.jsx";
+// import Card2 from '../Card/Card2.jsx';
 
 const Vp = () => {
     const limitedProducts = products.slice(0, 4);
@@ -152,13 +152,13 @@ const Vp = () => {
                     <Card2 item={item} key={item.id} />
                 ))}
             </div> */}
-            {/*  recent update product */}
+            {/*   recent update product */}
 
-            <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[30px] md:mt-[20px] md:mb-[140px]">
+            {/* <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[30px] md:mt-[20px] md:mb-[140px]">
                 {limitedProducts.map((item) => (
                     <Card2 item={item} key={item.id} />
                 ))}
-            </div>
+            </div> */}
             {/* recent update product */}
             {/* related  */}
 
