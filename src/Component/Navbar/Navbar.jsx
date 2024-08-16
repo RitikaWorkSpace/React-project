@@ -78,7 +78,7 @@ const Navbar = () => {
 
 <div>
   
-{/* <Cart size ={cart.length} setShow={setShow}/> */}
+
 
 <Link to='/CartPage'>
        <div className='relative inline-block'>

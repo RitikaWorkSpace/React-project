@@ -7,11 +7,13 @@ import EOP from '../Explore our product/EOP';
 import NA from '../New Arrival/NA';
 import CategoriesBanner from '../Categories/CategoriesBanner';
 
+
 const Home = () => {
     return (
         <div>
+            
             <Banner/>
-            <FlashSales/>
+            <FlashSales />
             <Categories/> 
             <BestSellingProduct/>
             <CategoriesBanner/>

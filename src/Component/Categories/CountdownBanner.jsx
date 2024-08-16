@@ -43,7 +43,7 @@ const CountdownBanner = () => {
 
 
 <div className='flex flex-col justify-center items-center rounded-full bg-white p-[10px] w-[60px] h-[60px]'>
-  <p className='font-intel font-[700] text-[16px]'>{timerHours}</p>
+  <p className='font-intel font-[700] text-[16px] '>{timerHours}</p>
   <p className='font-intel font-[500] text-[11px]'>Hours</p>
 </div>
 

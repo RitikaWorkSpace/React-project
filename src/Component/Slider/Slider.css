@@ -1,0 +1,10 @@
+.swiper-container {
+    overflow: hidden; /* Prevents overflowing */
+  }
+  
+  .slide-image {
+    width: 100%; /* Ensures images take the full width of the slide */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures the image is a block element */
+  }
+  

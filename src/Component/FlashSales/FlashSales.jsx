@@ -4,7 +4,7 @@ import Card from "../Card/Card.jsx";
 // import products from "../../data.jsx";
 import {Link} from 'react-router-dom';
 
-const FlashSales = ({product}) => {
+const FlashSales = () => {
 
 
  
@@ -28,7 +28,7 @@ const FlashSales = ({product}) => {
       <div className="max-w-[1170px] w-[100%] mx-auto">
         {/* red heading */}
 
-        <div className="flex">
+        <div className="flex mb-6">
           <img src="redRectangle.svg" className="max-w-[20px] w-[100%] "></img>
           <h3 className="text-[#DB4444] font-poppins font-[600] text-[16px] ml-[16px] my-auto leading-[20px]">
             Today's
@@ -36,7 +36,7 @@ const FlashSales = ({product}) => {
         </div>
         {/* red heading */}
 
-        <div className="flex flex-col md:flex-row  lg:flex-row justify-between">
+        <div className="flex flex-col md:flex-row  lg:flex-row justify-between items-center mb-[40px]">
           <div className="flex flex-col md:flex-row ">
             {/* flash timer */}
             <h1 className="font-intel font-[600] text-[36px] mr-[87px] ">
@@ -77,7 +77,7 @@ const FlashSales = ({product}) => {
   ))}
 </div> */}
 
-<Card product ={product}/>
+<Card/>
 
 
 

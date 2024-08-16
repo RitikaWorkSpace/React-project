@@ -10,8 +10,8 @@ const BestSellingProduct = () => {
   // const limitedProducts = products.slice(0, 4);
 
   return (
-    <div className='max-w-[1170px] w-[100%] mx-auto mt-[80px]'>
-      <div className='flex'>
+    <div className='max-w-[1170px] w-[100%] mx-auto mt-[80px] '>
+      <div className='flex mb-6'>
         <img src="./redRectangle.svg" className='max-w-[20px] w-[100%] ' alt="Red Rectangle" />
         <h3 className='text-[#DB4444] font-poppins font-[600] text-[16px] ml-[16px] my-auto leading-[20px]'>This Month</h3>
       </div>

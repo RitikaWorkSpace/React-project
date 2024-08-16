@@ -41,23 +41,23 @@ const Countdown = () => {
     return (
         <div className='flex items-center gap-[10px]'>
             <div className='flex flex-col'>
-                <p className={`font-intel font-[500]  text-[12px]`}>Days</p>
-                <p className={`font-intel font-[700]  text-[32px]`}>{timerDays} <span className={`text-[#E07575] text-[32px] mr-[5px]`}>:</span></p>
+                <p className={`font-intel font-[500]  text-[12px] `}>Days</p>
+                <p className={`font-intel font-[700]  text-[32px] leading-[30px]`}>{timerDays} <span className={`text-[#E07575] text-[32px] mr-[5px]`}>:</span></p>
             </div>
 
             <div className='flex flex-col'>
                 <p className={`font-intel font-[500]  text-[12px]`}>Hours</p>
-                <p className={`font-intel font-[700]  text-[32px]`}>{timerHours} <span className={`text-[#E07575] text-[32px] mr-[5px]`}>:</span></p>
+                <p className={`font-intel font-[700]  text-[32px] leading-[30px]`}>{timerHours} <span className={`text-[#E07575] text-[32px] mr-[5px]`}>:</span></p>
             </div>
 
             <div className='flex flex-col'>
                 <p className={`font-intel font-[500]  text-[12px]`}>Minutes</p>
-                <p className={`font-intel font-[700]  text-[32px]`}>{timerMinutes} <span className={`text-[#E07575] text-[32px] mr-[5px]`}>:</span></p>
+                <p className={`font-intel font-[700]  text-[32px] leading-[30px]`}>{timerMinutes} <span className={`text-[#E07575] text-[32px] mr-[5px]`}>:</span></p>
             </div>
 
             <div className='flex flex-col'>
                 <p className={`font-intel font-[500]  text-[12px]`}>Seconds</p>
-                <p className={`font-intel font-[700]  text-[32px]`}>{timerSeconds}</p>
+                <p className={`font-intel font-[700]  text-[32px] leading-[30px]`}>{timerSeconds}</p>
             </div>
         </div>
     );

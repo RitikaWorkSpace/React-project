@@ -73,6 +73,7 @@
 
 
 import React from "react";
+import Slider from '../Slider/Slider'
 
 
 
@@ -127,7 +128,7 @@ const Banner = () => {
         </div>
         {/* select list */}
         <div className="py-[40px] ml-[20px]">
-          <img src="./Banner01.svg" className="bg-cover "></img>
+         <Slider/>
         </div>
 
        

@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // custom components:
 import TopSection from "./Component/Navbar/TopSection";
@@ -26,9 +27,10 @@ const App = () => {
       
   return (
     <div>
+      <ToastContainer/>
       <TopSection />
       
-       <BrowserRouter>
+       
        <Navbar /> 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -48,7 +50,7 @@ const App = () => {
         </Routes>
         
         
-      </BrowserRouter>
+        
 
      
 

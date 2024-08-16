@@ -6,7 +6,7 @@ const NA = () => {
 
         <div className="max-w-[1170px] w-[100%] mx-auto ">
               {/* red heading */}
-            <div className="flex">
+            <div className="flex mb-6">
                 <img src="redRectangle.svg" className="max-w-[20px] w-[100%] "></img>
                 <h3 className="text-[#DB4444] font-poppins font-[600] text-[16px] ml-[16px] my-auto leading-[20px]">
                     Featured
