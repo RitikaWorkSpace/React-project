@@ -68,16 +68,18 @@ const Navbar = () => {
                 Contact
               </NavLink>
             </li>
-            <li className="font-poppins font-[400] text-[16px] leading-[24px] border-b-[2px] border-transparent ">
-              <NavLink
-                to="/Signup"
-                className={({ isActive }) =>
-                  isActive ? "border-b-2 border-black" : ""
-                }
-              >
-                SignUp
-              </NavLink>
-            </li>
+            {!user && (
+              <li className="font-poppins font-[400] text-[16px] leading-[24px] border-b-[2px] border-transparent">
+                <NavLink
+                  to="/Signup"
+                  className={({ isActive }) =>
+                    isActive ? "border-b-2 border-black" : ""
+                  }
+                >
+                  SignUp
+                </NavLink>
+              </li>
+            )}
           </ul>
         </nav>
 

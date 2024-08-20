@@ -482,3 +482,61 @@ view product
 //         </h3>*/}
 //       </div> 
 //     </div>
+
+
+
+catergory
+swiper.....
+
+     {/* <Swiper
+        modules={[Navigation]}
+        spaceBetween={30}
+        slidesPerView={1}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 6 },
+        }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        className="mt-[60px]"
+      >
+        <SwiperSlide>
+          <div className="border border-black px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-CellPhone.svg" className="mb-[16px]" alt="Phones" />
+            <p>Phones</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="border border-black px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-Computer.svg" className="mb-[16px]" alt="Computers" />
+            <p>Computers</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="border border-black px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-SmartWatch.svg" className="mb-[16px]" alt="SmartWatch" />
+            <p className="text-center">SmartWatch</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="border border-black bg-[#DB4444] text-white px-[57px] py-[24px] flex flex-col items-center justify-center">
+            <img src="./Category-Camera.svg" className="mb-[16px]" alt="Camera" />
+            <p>Camera</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="border border-black px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-Headphone.svg" className="mb-[16px]" alt="HeadPhones" />
+            <p className="">HeadPhones</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="border border-black px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-Gamepad.svg" className="mb-[16px]" alt="Gaming" />
+            <p>Gaming</p>
+          </div>
+        </SwiperSlide>
+      </Swiper> */}

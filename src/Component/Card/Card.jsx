@@ -57,7 +57,7 @@ const view = useNavigate();
 
       
         {product?.map((item, i) => (
-          <div className="max-w-[270px] w-full max-h-[350px] h-full " key={i}>
+          <div className="max-w-[270px] w-full max-h-[350px] h-full flex-wrap " key={i}>
             {/* Card Container */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               {/* Card Image */}

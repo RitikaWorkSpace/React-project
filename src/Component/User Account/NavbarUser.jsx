@@ -48,7 +48,7 @@ const NavbarUser = () => {
       {isDropdownOpen && (
         <div
           ref={dropdownRef}
-          className="absolute right-0 mt-2 hover:bg-[#DB4444] rounded w-[245px]"
+          className="absolute right-0 mt-2 hover:bg-[#DB4444] rounded w-[245px] z-10"
         >
           <ul className="bg-gradient-to-r from-[#98729d] to-[#666267] text-white w-full py-[10px] px-[20px] list-none">
             <Link to='/UA'>
