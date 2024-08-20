@@ -23,7 +23,7 @@ const Footer = () => {
                 className="border-none outline-none  max-w-[130px] w-[100%] bg-black text-[#FAFAFA] opacity-[40%] text-[13px] lg:text-[12px] xl:text-[13px]  "
               ></input>
               <img
-                src="./footerInputArrow.svg"
+                src="/footerInputArrow.svg"
                 alt="footerInputArrow"
                 className="max-w-[20px] w-[100%]"
               />
@@ -73,29 +73,29 @@ const Footer = () => {
             </p>
             <div className="flex gap-[10px]">
               <div>
-                <img src="./Qrcode.svg" alt="Qrcode" />
+                <img src="/Qrcode.svg" alt="Qrcode" />
               </div>
               <div>
                 <div>
-                  <img src="./AppStore.svg" alt="AppStore" />
+                  <img src="/AppStore.svg" alt="AppStore" />
                 </div>
                 <div>
-                  <img src="./GooglePlay.svg" alt="GooplePlay" />
+                  <img src="/GooglePlay.svg" alt="GooplePlay" />
                 </div>
               </div>
             </div>
             <ul className="list-none flex gap-[24px] mt-[24px]">
               <li>
-                <img src="./Facebook.svg" alt="facebook" />
+                <img src="/Facebook.svg" alt="facebook" />
               </li>
               <li>
-                <img src="./Twitter.svg" alt="twitter" />
+                <img src="/Twitter.svg" alt="twitter" />
               </li>
               <li>
-                <img src="./instagram.svg" alt="instagram" />
+                <img src="/instagram.svg" alt="instagram" />
               </li>
               <li>
-                <img src="./LinkedIn.svg" alt="linkedIn" />
+                <img src="/LinkedIn.svg" alt="linkedIn" />
               </li>
             </ul>
           </div>

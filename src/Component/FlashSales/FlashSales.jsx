@@ -1,25 +1,38 @@
 import React, { useState } from "react";
 import Countdown from "../FlashSales/Countdown";
 import Card from "../Card/Card.jsx";
-// import products from "../../data.jsx";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+// import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+
+
+
+
 
 const FlashSales = () => {
-
-
- 
-  // carousal
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? products.length - 1 : prevIndex - 1));
-  };
+  // const CustomArrowLeft = ({ onClick }) => {
+  //   return (
+  //     <button
+  //       onClick={onClick}
+  //       className="absolute -top-[4.5rem] right-[175px] z-10 p-2 bg-gray-200 rounded-full"
+  //     >
+  //       <IoIosArrowRoundBack className="w-6 h-6" />
+  //     </button>
+  //   );
+  // };
   
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === products.length - 1 ? 0 : prevIndex + 1));
-  };
-  
-  // carousal
-
+  // const CustomArrowRight = ({ onClick }) => {
+  //   return (
+  //     <button
+  //       onClick={onClick}
+  //       className="absolute -top-[4.5rem] right-[120px] z-10 p-2 bg-gray-200 rounded-full"
+  //     >
+  //       <IoIosArrowRoundForward className="w-6 h-6" />
+  //     </button>
+  //   );
+  // };
 
 
 
@@ -42,73 +55,50 @@ const FlashSales = () => {
             <h1 className="font-intel font-[600] text-[36px] mr-[87px] ">
               Flash Sales
             </h1>
-           
 
             <div>
-            <Countdown  />
+              <Countdown />
             </div>
           </div>
-
+{/* 
           <div className=" gap-[10px]  flex md:flex-row">
-            <div className="flex items-center justify-center bg-gray-300 rounded-full p-2 h-[36px]">
+            <div className="flex items-center justify-center bg-gray-300 rounded-[50%] p-2 h-[36px]">
               <img
                 src="./arrowLeft.svg"
                 alt="Arrow Left"
                 className="max-w-[16px] w-[100%] h-full "
-                onClick={handlePrev}
+               
               />
             </div>
-            <div className="flex items-center justify-center bg-gray-300 rounded-full p-2 h-[36px]">
+            <div className="flex items-center justify-center bg-gray-300 rounded-[50%] p-2 h-[36px]">
               <img
                 src="./arrowRight.svg"
                 alt="Arrow Right"
                 className="max-w-[16px] w-[100%] h-full"
-                onClick={handleNext}
+               
               />
             </div>
-          </div>
+          </div> */}
+
         </div>
 
-    {/*  product */}
-{/* <div className="flex gap-[30px] mt-[20px] transition-transform duration-300" 
-     style={{ transform: `translateX(-${currentIndex * 250}px)` }}>
-  {products.map((item) => (
-    <Card item={item} key={item.id} />
-  ))}
-</div> */}
+        {/*  product */}
 
 <Card/>
+        {/* <Card CustomArrowLeft={CustomArrowLeft} CustomArrowRight={CustomArrowRight}  /> */}
 
+        {/*  product */}
 
-
-
-
-
-
-{/*  product */}
-   
-
- 
-
-
-
-
-<Link to='/AllCard'>
-<div className="flex justify-center mt-[60px] ">
-          <button
-            
-            className="bg-[#DB4444] text-white py-[16px] px-[48px] text-center "
-          >
-            View All Products
-          </button>
-        </div>
-</Link>
-       
+        <Link to="/AllCard">
+          <div className="flex justify-center mt-[60px] ">
+            <button className="bg-[#DB4444] text-white py-[16px] px-[48px] text-center ">
+              View All Products
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );
 };
 
 export default FlashSales;
-
-

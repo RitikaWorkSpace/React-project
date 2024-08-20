@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
-// import products from "../../data.jsx";
-// import Card2 from '../Card/Card2';
+import Card2 from '../Card/Card2';
 import {Link} from 'react-router-dom';
 
 const EOP = () => {
@@ -18,7 +17,7 @@ const EOP = () => {
   };
   
   // carousal
-  // const limitedProducts = products.slice(0, 4);
+ 
     return (
 
         <div className='max-w-[1170px] w-[100%] mt-[70px] mx-auto'>
@@ -32,7 +31,7 @@ const EOP = () => {
 
 <div className="flex flex-col md:flex-row justify-between">
        
-        <h1 className="font-intel font-[600] text-[36px]">Explore Our Products</h1>
+        <h1 className="font-intel font-[600] text-[36px] ">Explore Our Products</h1>
         <div className="flex gap-[10px]">
     <div className="flex items-center justify-center bg-gray-300 rounded-full p-2 h-[36px]">
       <img
@@ -69,6 +68,10 @@ const EOP = () => {
                 ))}
             </div> */}
             {/* rc  product */}
+            <div className="mt-[60px]">
+            <Card2 />
+            </div>
+          
      
     
      

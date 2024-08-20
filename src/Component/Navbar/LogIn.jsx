@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../Redux/slices/UserLoginSlice";
 import { useNavigate } from "react-router-dom";
 
-
 const LogIn = () => {
   // user login
   // state
-  const [username, setUserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
 
   //redux state
   const { loading, error } = useSelector((state) => state.user);
@@ -25,7 +24,7 @@ const LogIn = () => {
       if (result.payload) {
         setUserName("");
         setPassword("");
-        navigate("/");
+        navigate("/UA");
       }
     });
   };
@@ -34,16 +33,19 @@ const LogIn = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 mt-[40px] mb-[120px] xs:mx-[10px] md:mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-[40px] mb-[120px] xs:mx-[10px] md:mx-auto">
         <div>
           <img src="./loginImg2.svg" alt="Sign up image." />
         </div>
         <div className=" xs:mt-[20px] md:mx-auto md:my-auto">
-          <form onSubmit={handleLoginEvent}>
-            <h1 className="font-inter font-[500] text-[36px] leading-[30px] mb-[24px]">
+          <form
+            onSubmit={handleLoginEvent}
+            className="flex  flex-col items-center md:items-start"
+          >
+            <h1 className="xs:text-[30px] sm:text-[36px] font-inter font-[500]  leading-[30px] mb-[24px] ">
               Log in to Exclusive
             </h1>
-            <p className="font-poppins font-[400] text-[16px] leading-[24px] mb-[14px]">
+            <p className="font-poppins font-[400] text-[16px] leading-[24px] mb-[20px] ">
               Enter your details below
             </p>
 
@@ -51,7 +53,7 @@ const LogIn = () => {
               type="text"
               placeholder="Name or Email"
               name="emailOrPhone"
-              className="border-b-[1px] border-grey outline-none mb-[20px] p-[8px] max-w-[348px] w-[100%]  "
+              className="border-b-[1px] border-grey outline-none mb-[20px] max-w-[348px] w-[100%]  "
               onChange={(e) => setUserName(e.target.value)}
             />
 
@@ -63,29 +65,26 @@ const LogIn = () => {
               type="password"
               placeholder="Password"
               name="password"
-              className="border-b-[1px] border-grey outline-none  p-[8px]  max-w-[348px] w-[100%] text-black"
+              className="border-b-[1px] border-grey outline-none    max-w-[348px] w-[100%] text-black"
               onChange={(e) => setPassword(e.target.value)}
             />
 
             <div className="text-red-500"></div>
 
             <br />
-            
-            <button
-  type="submit"
-  className="bg-[#DB4444] text-[#FAFAFA] py-[16px] px-[48px] rounded-[5px] mb-[16px]"
->
-  {loading ? "loading..." : "Log in"}
-</button>
+            <div className="flex flex-col md:flex-row md:gap-[47px]">
+              <button
+                type="submit"
+                className="bg-[#DB4444] text-[#FAFAFA] py-[16px] px-[48px] rounded-[5px] mb-[16px]"
+              >
+                {loading ? "loading..." : "Log in"}
+              </button>
               {error && alert(error)}
-            
 
-            <button
-              type="button"
-              className="text-[#DB4444] xs:ml-[10px] md:ml-[87px]"
-            >
-              Forget Password?
-            </button>
+              <button type="button" className="text-[#DB4444] ">
+                Forget Password?
+              </button>
+            </div>
           </form>
         </div>
       </div>

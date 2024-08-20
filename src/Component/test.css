@@ -1,0 +1,34 @@
+.card {
+    width: 370px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img {
+    width: 370px;
+    height: 430px;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .card-body h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+  }
+  
+  .card-body p {
+    font-size: 16px;
+    color: #555;
+  }
+  

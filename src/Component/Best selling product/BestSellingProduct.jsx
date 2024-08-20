@@ -1,6 +1,6 @@
 
-// import products from "../../data.jsx";
-// import Card2 from '../Card/Card2.jsx';
+
+import Card2 from '../Card/Card2.jsx';
 import { Link } from 'react-router-dom';
 
 
@@ -48,7 +48,9 @@ const BestSellingProduct = () => {
 
       {/* 14  product */}
 
-
+      <div className="mt-[60px]">
+            <Card2 />
+            </div>
 
       {/*  product */}
     </div>
