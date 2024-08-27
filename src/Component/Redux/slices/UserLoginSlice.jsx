@@ -1,29 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Async thunk for logging in the user
-export const loginUser = createAsyncThunk(
-    'user/loginUser',
-    async (userCredentials) => {
-        try {
-            const request = await axios.post(`https://fakestoreapi.com/auth/login`, userCredentials);
-            const response = request.data;
-            console.log('Login Response:', response); // Log the response
-            localStorage.setItem('user', JSON.stringify(response));
-            return response;
-        } catch (error) {
-            console.error('Login Error:', error.response ? error.response.data : error.message); // Log error details
-            throw error; // Rethrow to handle in extraReducers
-        }
-    }
-);
 
 // Slice for user login/logout
 const userLoginSlice = createSlice({
     name: 'user',
     initialState: {
         loading: false,
-        user: JSON.parse(localStorage.getItem('user')) || null, // Initialize user from localStorage if available
+        user: JSON.parse(localStorage.getItem('user')) || null,
         error: null
     },
     reducers: {
@@ -58,5 +42,33 @@ const userLoginSlice = createSlice({
     }
 });
 
+
+
+
+export const loginUser = createAsyncThunk(
+    'user/loginUser',
+    async (userCredentials) => {
+        try {
+            const request = await axios.get(`https://fakestoreapi.com/users`, userCredentials);
+            const response = request;
+            console.log('Login Response:', response); 
+           
+            return response;
+        } catch (error) {
+            console.error('Login Error:', error.response ? error.response.data : error.message); // Log error details
+            throw error; 
+        }
+    }
+);
+
+
+
 export const { logoutUser } = userLoginSlice.actions; // Export the logout action
 export default userLoginSlice.reducer;
+
+
+
+
+
+
+

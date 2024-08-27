@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import { useSelector } from "react-redux";
 
 
 
@@ -18,7 +19,15 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 
 const UA = () => {
-  
+//   const  user  = useSelector((state) => state.user.user);
+// const userData = user.config.data
+// const userDataParse = JSON.parse(userData);
+// const actuallData = userDataParse.username
+
+
+
+
+ 
 // const [user,setUser] = useState(getUser());
 const [isListVisibleMA, setIsListVisibleMA] = useState(false);
 const [isListVisibleMO, setIsListVisibleMO] = useState(false);
@@ -48,7 +57,7 @@ const handleToggleMyOrder = () => {
      
         <h1 className="  flex items-center">
           
-          Welcome! <span className="text-[#DB4444] pl-[2px]"> mor_2314</span>
+          Welcome! <span className="text-[#DB4444] pl-[2px]">User</span>
          
         </h1>
     

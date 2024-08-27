@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import Counter from "./Counter";
-import Card2 from '../Card/Card2'
+import Card from '../Card/Card'
 import Rating from "../Card/Rating";
+import { addToCart } from "../Redux/slices/cartSlice";
 
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const Vp = () => {
+  const user = useSelector((state) => state.user.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const [matchProduct, setmatchproduct] = useState([]);
   const { id } = useParams();
@@ -33,9 +41,20 @@ const Vp = () => {
     }
   }, [product]);
 
+
+
   if (!product) {
     return <div>Loading...</div>;
   }
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+    if (user) {
+      dispatch(addToCart(product));
+      navigate("/CartPage");
+  } else {
+      navigate("/Signup");
+  }
+  };
 
   return (
 
@@ -59,7 +78,7 @@ const Vp = () => {
             <div key={index} className="flex-shrink-0">
               <img
                 src={product.image}
-                className="bg-[#F5F5F5] px-[12px] md:px-[24px] py-[12px] max-w-[130px] md:max-w-[170px] max-h-[100px] md:max-h-[138px] w-full h-full object-cover"
+                className=" object-contain bg-[#F5F5F5] px-[12px] md:px-[24px] py-[12px] max-w-[130px] md:max-w-[170px] max-h-[100px] md:max-h-[138px] w-full h-full "
               />
             </div>
           ))}
@@ -148,7 +167,7 @@ const Vp = () => {
           {/* Counter, Button, and Like */}
           <div className="flex flex-col xs:flex-row gap-[12px] md:gap-[16px]">
             <Counter />
-            <button className="bg-[#DB4444] text-white hover:text-white py-[10px] px-[24px] md:px-[48px] rounded-[5px]">
+            <button className="bg-[#DB4444] text-white hover:text-white py-[10px] px-[24px] md:px-[48px] rounded-[5px]"  onClick={handleAddToCart}>
               Buy Now
             </button>
             <button className="p-[5px] bg-white border-2 rounded-[5px]">
@@ -207,7 +226,7 @@ const Vp = () => {
        
       </div> 
       <div className="mb-[140px]">
-      {/* <Card2 /> */}
+      <Card />
       </div>
       
 </div>

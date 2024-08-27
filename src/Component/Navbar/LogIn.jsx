@@ -25,9 +25,11 @@ const LogIn = () => {
         setUserName("");
         setPassword("");
         navigate("/UA");
+       
       }
     });
   };
+
 
   // user login
 

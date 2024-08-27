@@ -540,3 +540,190 @@ swiper.....
           </div>
         </SwiperSlide>
       </Swiper> */}
+
+
+
+      caard with silder that work
+        return (
+    <div className="relative">
+      <Slider {...settings}>
+        {product?.map((item) => (
+          <div className="max-w-[270px] w-full" key={item.id}>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden relative">
+              <div className="relative w-full h-[250px] bg-[#F5F5F5] group">
+                <div className="absolute top-2 left-2 bg-[#DB4444] text-white p-1 rounded-md">
+                  -40%
+                </div>
+                <div className="absolute top-2 right-2 flex flex-col gap-2">
+                  <button
+                    className={`p-2 rounded-full ${likedItems[item.id] ? 'bg-[#DB4444]' : 'bg-white'}`}
+                    onClick={() => dispatch(toggleLike(item.id))}
+                  >
+                    <svg
+                      className="h-6 w-6 text-gray-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                    </svg>
+                  </button>
+                  <button className="p-2 bg-white rounded-full" onClick={() => handleView(item.id)}>
+                    <svg
+                      className="h-6 w-6 text-gray-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.2 41.5 39.1 95.4 61.8 151.7 61.8s110.2-22.7 151.7-61.8c38.4-35.7 65-78.2 78.6-108.2-13.6-30-40.2-72.5-78.6-108.2C406.8 109.6 353.2 80 288 80zM288 384c-49.6 0-95.6-25.2-133.4-67.2 37.8-41.8 82.7-67.8 133.4-67.8s95.6 25.2 133.4 67.8C383.6 358.8 337.6 384 288 384zM0 232c0 33.6 14.5 65.7 39.6 90.8 4.1 4.1 8.7 7.8 13.4 11.2C32.4 293.2 16 263.4 16 232c0-31.4 9.1-61.1 24.4-85.6C16.1 178.2 0 207.6 0 232zm528 0c0 33.6-14.5 65.7-39.6 90.8-4.1 4.1-8.7 7.8-13.4 11.2C512.8 293.2 528 263.4 528 232c0-31.4-9.1-61.1-24.4-85.6C518.9 178.2 528 207.6 528 232z" />
+                    </svg>
+                  </button>
+                </div>
+                <img
+                  className="object-cover w-full h-full"
+                  src={item.image}
+                  alt={item.title}
+                />
+              </div>
+              <div className="p-4">
+                <h2 className="text-lg font-semibold">{item.title}</h2>
+                <p className="text-gray-500">{item.description}</p>
+                <Rating value={item.rating} />
+                <button
+                  className="bg-[#DB4444] text-white px-4 py-2 rounded mt-4"
+                  onClick={() => handleAddToCart(item)}
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+
+
+
+
+
+
+
+
+
+
+
+  kush with slider code browse by catergory
+  import React from "react";
+import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+const Categories = () => {
+  const CustomArrowLeft = ({ onClick }) => (
+    <button
+      onClick={onClick}
+      className="absolute -top-[6.5rem] right-[76px] z-10 p-2 bg-gray-200 rounded-full"
+    >
+      <IoIosArrowRoundBack className="w-6 h-6" />
+    </button>
+  );
+
+  const CustomArrowRight = ({ onClick }) => (
+    <button
+      onClick={onClick}
+      className="absolute -top-[6.5rem] right-[17px] z-10 p-2 bg-gray-200 rounded-full"
+    >
+      <IoIosArrowRoundForward className="w-6 h-6" />
+    </button>
+  );
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <CustomArrowRight />,
+    prevArrow: <CustomArrowLeft />,
+    responsive: [
+      {
+        breakpoint: 1024, // Screen size less than 1024px
+        settings: {
+          slidesToShow: 3, // Show 3 slides
+        },
+      },
+      {
+        breakpoint: 768, // Screen size less than 768px (tablets and mobile)
+        settings: {
+          slidesToShow: 2, // Show 2 slides
+        },
+      },
+      {
+        breakpoint: 480, // Screen size less than 480px (mobile)
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className="max-w-[1170px] w-[100%] mx-auto mt-[80px]">
+      <div>
+      <div className="flex">
+           <img
+            src="./redRectangle.svg"
+             className="max-w-[20px] w-[100%] "
+          ></img>
+          <h3 className="text-[#DB4444] font-poppins font-[600] text-[16px] ml-[16px] my-auto leading-[20px]">
+            Categories
+           </h3>
+        </div>
+        <div className="flex flex-col md:flex-row lg:flex-row justify-between">
+          <h1 className="font-inter text-black text-[36px] font-[600] leading-[48px] mt-[20px]">
+            Browse By Category
+          </h1>
+        </div>
+      </div>
+      <Slider {...settings} className="mt-[60px]">
+        <div className="flex justify-center items-center p-4  ">
+          <div className="border border-black  px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-CellPhone.svg" className="mb-[16px]" />
+            <p className="">Phones</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center p-4 ">
+          <div className="border border-black px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-Computer.svg" className="mb-[16px]" />
+            <p>Computers</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center p-4 ">
+          <div className="border border-black px-[57px] py-[24px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">
+            <img src="./Category-SmartWatch.svg" className="mb-[16px]" />
+            <p className="text-center">SmartWatch</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center p-4 ">
+          <div className="border border-black bg-[#DB4444] text-white px-[57px] py-[24px] flex flex-col items-center justify-center">
+            <img src="./Category-Camera.svg" className="mb-[16px]" />
+            <p>Camera</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center p-4 ">
+          <div className="border border-black hover:bg-[#DB4444] hover:text-white px-[57px] py-[24px] flex flex-col items-center justify-center">
+            <img src="./Category-Headphone.svg" className="mb-[16px]" />
+            <p>HeadPhones</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center p-4 ">
+          <div className="border border-black hover:bg-[#DB4444] hover:text-white px-[57px] py-[24px] flex flex-col items-center justify-center">
+            <img src="./Category-Gamepad.svg" className="mb-[16px]" />
+            <p>Gaming</p>
+          </div>
+        </div>
+      </Slider>
+    </div>
+  );
+};
+
+export default Categories;

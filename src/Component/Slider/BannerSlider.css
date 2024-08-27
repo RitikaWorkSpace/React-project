@@ -1,16 +1,9 @@
-
-.swiper {
-  width: 100%;
-  height: 100%;
+.SS{
+    width:100%;
+    margin-right:0px;
 }
 
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
- 
-  object-fit: cover;
-}
 
 .autoplay-progress {
   position: absolute;

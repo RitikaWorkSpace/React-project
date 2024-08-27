@@ -24,7 +24,7 @@ const App = () => {
       <ToastContainer />
       <TopSection />
 
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
@@ -64,7 +64,7 @@ export default App;
 
 
 
-// -------------------------
+
 // import React, { useState, useEffect } from "react";
 // import { Routes, Route } from "react-router-dom";
 // import { ToastContainer } from "react-toastify";
@@ -85,7 +85,8 @@ export default App;
 // import AllCard from "./Component/Card/AllCard";
 // import CartPage from "./Component/Cart/CartPage";
 // import Loader from "./Component/Loader/Loader"; 
-
+// import Parent from "./Component/New Slider/Parent";
+// import Child from "./Component/New Slider/Child";
 // const App = () => {
 //   const [loading, setLoading] = useState(true);
 
@@ -120,6 +121,8 @@ export default App;
 //             <Route path="/UA" element={<UA />} />
 //             <Route path="/AllCard" element={<AllCard />} />
 //             <Route path="/CartPage" element={<CartPage />} />
+//             <Route path="/Parent" element={<Parent />} />
+//             <Route path="/Child" element={<Child />} />
            
 //           </Routes>
 //           <Footer />

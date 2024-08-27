@@ -209,25 +209,28 @@
 
 import React, { useEffect, useState } from "react";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement, remove } from "../Redux/slices/cartSlice";
+
+import { incrementItem, decrementItem, removeFromCart } from "../NewRedux/actions";
+
 
 const CartPage = () => {
-  const cart = useSelector((state) => state.allCart.cartItems);
+  const cart = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
+ 
   const [subTotal, setSubTotal] = useState(0);
 
-  if (!cart) {
-    return <div>Loading...</div>;
-  }
-  console.log(cart);
+  // if (!cart) {
+  //   return <div>Loading...</div>;
+  // }
+  // console.log(cart);
 
   const calSubTotal = () => {
     let totalPrice = 0;
-
-    cart.map(
-      (item) => (totalPrice = totalPrice + item.price * item.cartQuantity)
-    );
+    cart.forEach(item => {
+      totalPrice += item.price * item.cartQuantity;
+    });
     setSubTotal(totalPrice);
   };
 
@@ -244,7 +247,7 @@ const CartPage = () => {
         <div className="flex justify-center text-black text-[36px] font-[600] leading-[48px] m-[100px]">
           Your Cart is <span className="text-[red]">&nbsp; Empty &nbsp;</span>
         </div>
-      ) : (
+      ) : ( 
         <div className="max-w-[1170px] mx-auto mt-[181px] mb-[140px]">
      <div className="relative overflow-x-auto">
   <table className="w-full hidden sm:table">
@@ -270,7 +273,7 @@ const CartPage = () => {
           <td className="flex items-center gap-[22px] py-[24px] px-[39px]">
           <div className="relative ">
   <span
-    onClick={() => dispatch(remove(item.id))}
+    onClick={() => dispatch(removeFromCart(item.id))}
     className="absolute -top-[16px] -left-[4px] bg-[#DB4444] text-white px-[4px] rounded-full cursor-pointer"
     style={{ zIndex: 10 }}  // Ensures the span appears above the image
   >
@@ -340,13 +343,13 @@ const CartPage = () => {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <img
-                  onClick={() => dispatch(increment(item.id))}
+                  onClick={() => dispatch(incrementItem(item.id))}
                   className="hover:bg-[#DB4444] hover:text-white w-[20px] h-[20px]"
                   src="./cart01top arrow.svg"
                   alt="Decrement"
                 />
                 <img
-                  onClick={() => dispatch(decrement(item.id))}
+                   onClick={() => dispatch(decrementItem(item.id))}
                   className="hover:bg-[#DB4444] hover:text-white w-[20px] h-[20px]"
                   src="./cart02bottomarrow.svg"
                   alt="Increment"
@@ -363,7 +366,6 @@ const CartPage = () => {
     ))}
   </div>
 </div>
-
 
           {/* return to shop ,update cart */}
           <div className="flex  lg:flex-row justify-between mt-[24px]">
@@ -430,7 +432,8 @@ const CartPage = () => {
           </div>
           {/* Apply Coupon ,process to checkout */}
         </div>
-      )}
+       ) 
+      }
     </div>
   );
 };
