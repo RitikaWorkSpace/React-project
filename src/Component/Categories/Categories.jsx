@@ -18,7 +18,7 @@ const Categories = () => {
   };
   return (
     <>
- <div className="max-w-[1170px] w-[100%] mx-auto mt-[80px]">
+ <div className="max-w-[1170px] w-[100%] mx-auto mt-[80px] p-[10px]">
       <div>
         <div className="flex">
           <img
@@ -33,7 +33,7 @@ const Categories = () => {
           <h1 className="font-inter text-black text-[36px] font-[600] leading-[48px] mt-[20px]">
             Browse By Category
           </h1>
-          <div className="flex gap-[10px] ">
+          <div className="flex gap-[10px] mt-[20px]">
 
 <button
 onClick={preButton}
@@ -55,7 +55,7 @@ className=" p-2 bg-gray-200 rounded-full h-[40px]"
     </div>
     {/* box */}
     <div ref={sliderRef} className=" overflow-x-auto scroll-smooth 
-       mt-[60px]  no-scrollbar xl:max-w-[1170px] xl:mx-auto"
+       mt-[60px]  no-scrollbar xl:max-w-[1170px]  xl:mx-auto"
     >
       <div className="flex gap-[30px]">
       <div className="  border border-black px-[57px] py-[24px] w-[170px] hover:bg-[#DB4444] hover:text-white flex flex-col items-center justify-center">

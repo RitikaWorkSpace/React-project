@@ -4,8 +4,8 @@ import Slider from "../Slider/BannerSlider";
 const Banner = () => {
   return (
     <div className="border-t-[#e5e7eb]  border-t-[0.5px] ">
-      <div className=" grid grid-cols-1 lg:grid-cols-[20%_auto] max-w-[1170px] w-[100%] mx-auto  ">
-        <div className=" xs:pl-[20px] mb-[40px] xs:hidden lg:block">
+      <div className=" grid grid-cols-1 lg:grid-cols-[20%_auto] max-w-[1170px] w-[100%] p-[10px] mx-auto  p-[10px] ">
+        <div className="  mb-[40px] xs:hidden lg:block">
           <ul className="font-poppins text-[16px] leading-[24px] max-w-[217px] w-[100%] pt-[40px] border-r-[#cacacc]  border-r-[0.5px]">
             <div className="flex items-center gap-[32px]">
               <li className="font-[400] mb-[16px] cursor-pointer">Woman’s Fashion</li>

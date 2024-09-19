@@ -9,9 +9,9 @@
 
 
 // const FlashSales = () => {
- 
+
 //   const product = useSelector((state) => state.products.product);
-  
+
 
 //   const CustomArrowLeft = ({ onClick }) => {
 //     return (
@@ -65,13 +65,13 @@
 //             <button>2</button>
 //           </div>
 //   </div>
-      
 
-        
-   
-         
-     
-     
+
+
+
+
+
+
 
 //         {/*  product */}
 
@@ -192,7 +192,7 @@
 
 // const FlashSales = () => {
 //   const product = useSelector((state) => state.products.product);
-  
+
 //   const sliderRef = useRef(null);
 
 //   const goToSlide = (index) => {
@@ -290,9 +290,9 @@ import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 
 
 const FlashSales = () => {
- 
 
-  
+
+
 
   const sliderRef = useRef(null);
 
@@ -315,63 +315,60 @@ const FlashSales = () => {
   return (
     <div className="pb-[60px] border-b border-grey-500 w-full overflow-hidden">
       <div className=" w-[100%]  ">
-      <div className="flex mb-6   max-w-[1170px] mx-auto w-full ">
-  <img src="redRectangle.svg" className="max-w-[20px] w-[100%]" alt="Red Rectangle"/>
-  <h3 className="text-[#DB4444] font-poppins font-[600] text-[16px] ml-[16px] my-auto leading-[20px]">
-    Today's
-  </h3>
-</div>
+        <div className="flex mb-6   max-w-[1170px] mx-auto w-full p-[10px] ">
+          <img src="redRectangle.svg" className="max-w-[20px] w-[100%]" alt="Red Rectangle" />
+          <h3 className="text-[#DB4444] font-poppins font-[600] text-[16px] ml-[16px] my-auto leading-[20px]">
+            Today's
+          </h3>
+        </div>
 
 
-  <div className="flex justify-between max-w-[1170px] mx-auto w-full">
-  <div className="  flex flex-col md:flex-row  md:gap-[87px] mb-[40px]">
+        <div className="flex flex-col  sm:flex-row  justify-between max-w-[1170px] mx-auto w-full p-[10px]">
+          <div className="  flex flex-col md:flex-row  md:gap-[87px] mb-[40px]">
             {/* flash timer */}
             <h1 className="font-intel font-[600] text-[36px]  ">
               Flash Sales
             </h1>
 
-          
-              <Countdown />
-           
+
+            <Countdown />
+
           </div>
 
-                <div className="flex gap-[10px] ">
+          <div className="flex gap-[10px] ">
 
-          <button
-         onClick={preButton}
-         className=" p-2 bg-gray-200 rounded-full h-[40px]"
-       >
-         <IoIosArrowRoundBack className="w-6 h-6" />
-       </button>
-         
-          <button
-        onClick={nextButton}
-         className=" p-2 bg-gray-200 rounded-full h-[40px]"
-       >
-         <IoIosArrowRoundForward className="w-6 h-6" />
-       </button>
-        </div> 
+            <button
+              onClick={preButton}
+              className=" p-2 bg-gray-200 rounded-full h-[40px]"
+            >
+              <IoIosArrowRoundBack className="w-6 h-6" />
+            </button>
 
-          {/* <div className='flex justify-between'>
-        <button className=" " onClick={preButton}>-</button>
-        <button className=" " onClick={nextButton}>+</button>
-      </div> */}
-  </div>
-      
+            <button
+              onClick={nextButton}
+              className=" p-2 bg-gray-200 rounded-full h-[40px]"
+            >
+              <IoIosArrowRoundForward className="w-6 h-6" />
+            </button>
+          </div>
 
-        
-   
-         
-     
-     
+
+        </div>
+
+
+
+
+
+
+
 
         {/*  product */}
 
         {/* <Card/> */}
         <div>
-     
-      <Card ref={sliderRef} />
-    </div>
+
+          <Card ref={sliderRef} />
+        </div>
 
         {/*  product */}
 

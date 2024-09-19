@@ -5,7 +5,7 @@ import AboutSlider from "../Slider/AboutSlider";
 const About = () => {
   return (
     <div>
-      <div className='max-w-[1170px] w-[100%] mx-auto relative top-[80px] text-center md:text-left'>
+      <div className='max-w-[1170px] w-[100%] mx-auto p-[10px] relative top-[80px] text-center md:text-left'>
         <Breadcrumbs />
       </div>
 
@@ -36,7 +36,7 @@ const About = () => {
       {/* our story */}
 
       {/* box  */}
-      <div className="max-w-[1170px] w-full mx-auto  mt-[140px]   grid grid-cols-1 gap-[20px]     sm:grid-cols-2   lg:grid-cols-4 ">
+      <div className="max-w-[1170px] w-full p-[10px] mx-auto  mt-[140px]   grid grid-cols-1 gap-[20px]     sm:grid-cols-2   lg:grid-cols-4 ">
         <div className=" border-2 px-[50px] py-[30px] flex justify-center items-center flex-col hover:bg-[#DB4444] hover:text-[#fff] ">
           <img
             src="./icon-delivery.svg"
@@ -111,9 +111,10 @@ const About = () => {
   {/* photo section */}
 
       {/* above footer */}
-      <div className="max-w-[1170px] w-[100%] mx-auto my-[140px]">
-        <div className="grid grid-cols-1 gap-[88px] md:grid-cols-3">
-          <div className="  flex justify-center items-center flex-col ">
+      <div className="max-w-[1170px] w-[100%] p-[10px] mx-auto my-[140px] ">
+        {/* <div className="grid grid-cols-1 gap-[88px] md:grid-cols-3"> */}
+        <div className="flex flex-col sm:flex-row gap-[80px] justify-center">
+          <div className="  flex flex-col justify-center items-center   text-center ">
             <img
               src="./icon-delivery.svg"
               className="bg-black rounded-full mb-[24px]"

@@ -4,7 +4,7 @@ import NABottom from './NABottom';
 const NA = () => {
     return (
 
-        <div className="max-w-[1170px] w-[100%] mx-auto ">
+        <div className="max-w-[1170px] w-[100%] mx-auto mt-[140px] p-[10px]">
               {/* red heading */}
             <div className="flex mb-6">
                 <img src="redRectangle.svg" className="max-w-[20px] w-[100%] "></img>

@@ -207,10 +207,10 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useMemo } from "react";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"; 
 
 import { incrementItem, decrementItem, removeFromCart } from "../NewRedux/actions";
 
@@ -226,29 +226,37 @@ const CartPage = () => {
   // }
   // console.log(cart);
 
-  const calSubTotal = () => {
-    let totalPrice = 0;
-    cart.forEach(item => {
-      totalPrice += item.price * item.cartQuantity;
-    });
-    setSubTotal(totalPrice);
-  };
+  // const calSubTotal = () => {
+  //   let totalPrice = 0;
+  //   cart.forEach(item => {
+  //     totalPrice += item.price * item.cartQuantity;
+  //   });
+  //   setSubTotal(totalPrice);
+  // };
+
+  // useEffect(() => {
+  //   calSubTotal();
+  // }, [cart]);
+
+  const calSubTotal = useMemo(() => {
+    return cart.reduce((acc, item) => acc + item.price * item.cartQuantity, 0);
+  }, [cart]);
 
   useEffect(() => {
-    calSubTotal();
-  }, [cart]);
+    setSubTotal(calSubTotal);
+  }, [calSubTotal]);
 
   return (
     <div>
-      <div className="max-w-[1170px] w-[100%] mx-auto relative top-[80px] ">
+      <div className="max-w-[1170px] w-[100%] p-[10px] mx-auto relative top-[80px] ">
         <Breadcrumbs />
       </div>
       {cart.length === 0 ? (
         <div className="flex justify-center text-black text-[36px] font-[600] leading-[48px] m-[100px]">
-          Your Cart is <span className="text-[red]">&nbsp; Empty &nbsp;</span>
+          Your Cart is <span className="text-[#DB4444]">&nbsp; Empty &nbsp;</span>
         </div>
       ) : ( 
-        <div className="max-w-[1170px] mx-auto mt-[181px] mb-[140px]">
+        <div className="max-w-[1170px] mx-auto p-[10px] mt-[181px] mb-[140px]">
      <div className="relative overflow-x-auto">
   <table className="w-full hidden sm:table">
     <thead>
@@ -300,13 +308,13 @@ const CartPage = () => {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <img
-                  onClick={() => dispatch(increment(item.id))}
+                  onClick={() => dispatch(incrementItem(item.id))}
                   className="hover:bg-[#DB4444] hover:text-white w-[20px] h-[20px]"
                   src="./cart01top arrow.svg"
                   alt="Decrement"
                 />
                 <img
-                  onClick={() => dispatch(decrement(item.id))}
+                  onClick={() => dispatch(decrementItem(item.id))}
                   className="hover:bg-[#DB4444] hover:text-white w-[20px] h-[20px]"
                   src="./cart02bottomarrow.svg"
                   alt="Increment"
@@ -402,7 +410,7 @@ const CartPage = () => {
                   Subtotal:
                 </p>
                 <p className="text-[16px] font-[400] leading-[24px] font-poppins">
-                  {subTotal.toFixed(2)}
+                ${subTotal}
                 </p>
               </div>
               <div className="flex justify-between border-b-[1px]  py-[16px] px-[24px]">
@@ -418,7 +426,7 @@ const CartPage = () => {
                   Total:
                 </p>
                 <p className="text-[16px] font-[400] leading-[24px] font-poppins">
-                  {subTotal.toFixed(2)}
+                ${subTotal}
                 </p>
               </div>
 <div className="flex justify-center">

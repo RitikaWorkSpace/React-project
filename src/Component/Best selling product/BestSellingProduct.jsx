@@ -1,11 +1,13 @@
 import Card from "../Card/Card";
 import { Link } from "react-router-dom";
 
+
 const BestSellingProduct = () => {
-  // const limitedProducts = products.slice(0, 4);
+
+
 
   return (
-    <div className="max-w-[1170px] w-[100%] mx-auto mt-[80px] ">
+    <div className="max-w-[1170px] w-[100%] mx-auto mt-[80px] p-[10px]">
       <div className="flex mb-6">
         <img
           src="./redRectangle.svg"
@@ -17,13 +19,14 @@ const BestSellingProduct = () => {
         </h3>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
-        <h1 className="font-inter text-black text-[36px] font-[600] leading-[48px] mt-[20px] lg:mt-0">
+      <div className="flex flex-col  gap-[10px] lg:flex-row justify-between items-start lg:items-center">
+        <h1 className="font-inter text-black text-[36px] font-[600] leading-[48px] ">
           Best Selling Products
         </h1>
 
         <Link to="/AllCard">
-          <button className="bg-[#DB4444] text-white py-2 px-4 md:py-[16px] md:px-[48px] mt-4 lg:mt-0">
+          {/* <button className="bg-[#DB4444] text-white py-2 px-4 md:py-[16px] md:px-[48px] mt-4 lg:mt-0"> */}
+          <button className="bg-[#DB4444] text-white py-[16px] px-[48px]   ">
             View All
           </button>
         </Link>
@@ -32,7 +35,7 @@ const BestSellingProduct = () => {
       {/*  product */}
 
       <div className="mt-[60px]">
-        {/* <Card /> */}
+   <Card/>
       </div>
 
       {/*  product */}

@@ -42,19 +42,19 @@ const CountdownBanner = () => {
         <div className='flex items-center gap-[10px]'>
 
 
-<div className='flex flex-col justify-center items-center rounded-full bg-white p-[10px] w-[60px] h-[60px]'>
-  <p className='font-intel font-[700] text-[16px] '>{timerHours}</p>
-  <p className='font-intel font-[500] text-[11px]'>Hours</p>
-</div>
 
-
-            <div className='flex flex-col justify-center items-center rounded-full bg-white p-[10px] w-[60px] h-[60px]'>
-            <p className={`font-intel font-[700]  text-[16px]`}>{timerDays} </p>
-                <p className={`font-intel font-[500]  text-[11px]`}>Days</p>
+      
+            <div className='flex flex-col justify-center items-center rounded-full bg-white p-[10px] w-[60px] h-[60px] '>
+            <p className={`font-intel font-[700]  text-[16px]`}>{timerHours} </p>
+                <p className={`font-intel font-[500]  text-[11px]`}>&nbsp;&nbsp;Hours&nbsp;&nbsp;</p>
 
             </div>
 
-           
+            <div className='flex flex-col justify-center items-center rounded-full bg-white p-[10px] w-[60px] h-[60px] '>
+            <p className={`font-intel font-[700]  text-[16px]`}>{timerDays} </p>
+                <p className={`font-intel font-[500]  text-[11px]`}>&nbsp;&nbsp;Days&nbsp;&nbsp;</p>
+
+            </div>
 
             <div className='flex flex-col justify-center items-center rounded-full bg-white p-[10px] w-[60px] h-[60px] '>
             <p className={`font-intel font-[700]  text-[16px]`}>{timerMinutes} </p>

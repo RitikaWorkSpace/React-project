@@ -9,7 +9,7 @@ const TopSection = () => {
 
   return (
     <div className="bg-[#000000]  ">
-      <div className="flex w-[100%] max-w-[1170px] m-auto justify-between items-center  py-[10px] ">
+      <div className="flex w-[100%] max-w-[1170px] m-auto justify-between items-center  p-[10px] ">
         <div className="text-[#FAFAFA] font-[400] font-poppins text-sm leading-[21px] text-center w-full">
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
           <span className="font-[600] text-[#FAFAFA] font-poppins text-sm leading-[24px] underline underline-offset-1">

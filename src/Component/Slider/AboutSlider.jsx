@@ -34,7 +34,7 @@ function AboutSlider() {
         },
       }}
       modules={[Autoplay, Pagination]}
-      className="mySwiper max-w-[1170px] w-full mx-auto " 
+      className="mySwiper max-w-[1170px] w-full p-[10px] mx-auto " 
     >
       {[...Array(6)].map((_, index) => (
         <SwiperSlide key={index}>

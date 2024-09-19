@@ -1,4 +1,4 @@
-import { FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS, FETCH_PRODUCT_FAILURE, GET_PRODUCT_DATA } from './actionTypes';
+import { FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS, FETCH_PRODUCT_FAILURE, GET_PRODUCT_DATA} from './actionTypes';
 
 export const fetchProductRequest = () => ({
   type: FETCH_PRODUCT_REQUEST,
@@ -17,8 +17,7 @@ export const fetchProductFailure = (error) => ({
 export const getProductData = () => ({
   type: GET_PRODUCT_DATA,
 });
-
-// ============================================================================================
+// =======================================Cart=====================================================
 
 // Define action types
 export const ADD_TO_CART = "ADD_TO_CART";
@@ -46,3 +45,23 @@ export const decrementItem = (id) => ({
   type: DECREMENT_ITEM,
   payload: id,
 });
+
+// =========================================Like=============================================
+
+import { TOGGLE_LIKE_REQUEST, TOGGLE_LIKE_SUCCESS, TOGGLE_LIKE_FAILURE } from './actionTypes';
+
+export const toggleLikeRequest = (itemId) => ({
+  type: TOGGLE_LIKE_REQUEST,
+  payload: itemId,
+});
+
+export const toggleLikeSuccess = (itemId) => ({
+  type: TOGGLE_LIKE_SUCCESS,
+  payload: itemId,
+});
+
+export const toggleLikeFailure = (error) => ({
+  type: TOGGLE_LIKE_FAILURE,
+  payload: error,
+});
+

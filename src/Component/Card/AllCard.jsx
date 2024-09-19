@@ -3,26 +3,24 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 // custom
-import { fetchProduct } from "../Redux/slices/productSlice";
-import { addToCart } from "../Redux/slices/cartSlice";
+import  {GET_PRODUCT_DATA}  from '../NewRedux/actionTypes';
+import { addToCart } from '../NewRedux/actions';
+import { toggleLike } from '../NewRedux/likeReducer';
 import Rating from "./Rating";
-import { toggleLike } from "../Redux/slices/likeSlice";
 
 const AllCard = () => {
   // product show
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const likedItems = useSelector((state) => state.likes.likedItems);
-  const product = useSelector((state) => state.products.product);
+  const product = useSelector(state => state.product.productData)
 
   useEffect(() => {
-    dispatch(fetchProduct());
-  }, []);
-  const status = useSelector((state) => state.products.status);
-  if (status === "loading") {
-    return <div>loading....</div>;
-  }
-  // product show
+    console.log("useEffect")
+    dispatch({ type: GET_PRODUCT_DATA }); 
+  }, [dispatch]);
+
+
 
   // add to cart with reducer
   const handleAddToCart = (item) => {
